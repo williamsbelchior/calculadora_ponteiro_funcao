@@ -1,0 +1,11 @@
+Dentro de plugins
+
+gcc -Wall -fPIC -c *.c
+gcc -shared -fPIC -o ../plugins/libsoma.so soma.o
+gcc -shared -fPIC -o ../plugins/libsubtrai.so subtrai.o
+gcc -shared -fPIC -o ../plugins/libmultiplica.so multiplica.o
+gcc -shared -fPIC -o ../plugins/libdivide.so divide.o
+
+Pasta raiz
+
+gcc -rdynamic -o calculadoradl calculadoradl.c -ldl	
